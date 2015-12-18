@@ -52,7 +52,7 @@ CartTable = React.createClass({
 
     return content;
   },
-  
+
   render() {
     return ( <div
                   className="container"

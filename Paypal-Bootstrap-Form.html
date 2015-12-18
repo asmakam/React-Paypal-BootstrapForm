@@ -4,16 +4,15 @@
 
 <body>
   <h1>Paypal Package Demo</h1>
-
   {{> PaypalDemo}}
-
 </body>
 
 <!-- Templates for payment portal on client side-->
 <template name="PaypalDemo">
   <div class="container mainContainer">
     <div>
-      {{ > React component=CartTable cartItems=cartItems email=email }}
+      {{> React component=CartTable cartItems=cartItems email=email }}
     </div>
   </div> 
 </template>
+
