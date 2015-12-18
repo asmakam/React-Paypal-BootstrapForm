@@ -3,8 +3,8 @@ if (Meteor.isClient) {
   Session.setDefault('counter', 0);
 
   Template.PaypalDemo.helpers({
-    PaypalCart: function() {
-      return PaypalCart;
+    CartTable: function() {
+      return CartTable;
     },
 
     cartItems: function() {
