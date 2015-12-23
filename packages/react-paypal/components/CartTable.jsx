@@ -7,6 +7,11 @@ CartTable = React.createClass({
   updateCart( event ) {
     event.preventDefault();
     var cartItems = this.state.cartItems;
+    if (isNaN(parseInt(event.target.value))) {
+     cartItems[parseInt(event.target.id)].count = 0;
+     this.setState({cartItems: cartItems});
+     return;
+    }
     cartItems[parseInt(event.target.id)].count = parseInt(event.target.value);
     this.setState({cartItems: cartItems});
   },
@@ -29,7 +34,7 @@ CartTable = React.createClass({
                                ref="textInput"
                                min="0"
                                max="100"
-                               value={ this.state.cartItems[idx].count }
+                               value={this.state.cartItems[idx].count }
                                onChange={ this.updateCart } />
                       </td>
                       <td>
